@@ -14,9 +14,8 @@ list_of_columns =['code', 'state', 'category', 'total exports', 'beef', 'pork', 
 mycolumn='corn'
 myheading1 = f"Wow! That's a lot of {mycolumn}!"
 mygraphtitle = '2011 US Agriculture Exports by State'
-mycolorscale = 'Reds'
+mycolorscale = 'ylorrd' # Note: The error message will list possible color scales.
 mycolorbartitle = "Millions USD"
-
 tabtitle = 'Old McDonald'
 sourceurl = 'https://plot.ly/python/choropleth-maps/'
 githublink = 'https://github.com/austinlasseter/dash-map-usa-agriculture'
@@ -37,7 +36,9 @@ fig = go.Figure(data=go.Choropleth(
 
 fig.update_layout(
     title_text = mygraphtitle,
-    geo_scope='usa', # limite map scope to USA
+    geo_scope='usa',
+    width=1200,
+    height=800
 )
 
 ########### Initiate the app
